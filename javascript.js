@@ -26,13 +26,8 @@ function randomNumber (arr){
 }
 function newQuote(){
   console.log("Hello")
-  diyQuote = ''+noun[randomNumber(noun)]+' '+verb[randomNumber(verb)]+' '+adjective[randomNumber(adjective)]+'';
+  diyQuote = ' '+noun[randomNumber(noun)]+' '+verb[randomNumber(verb)]+' '+adjective[randomNumber(adjective)]+' ';
   document.getElementById("quoteDisplay").innerHTML = diyQuote;
-}
-function checkIfSame(word, arr) {
-  return arr.filter(function(v) {
-    return (v === word);
-  }).length;
 }
 function addAdjective(){
   const value = document.getElementById("adjective").value;
@@ -46,6 +41,15 @@ function addAdjective(){
     adjective.push(value);
     console.log('value is not the same', adjective, value);
   }
+  //adding button of input onclick adjective
+  //adjectiveButton = '<button>'adjective'</button>';
+  //document.getElementById("storedAdjectives").innerHTML = adjectiveButton;
+}
+
+function checkIfSame(word, arr) {
+  return arr.filter(function(v) {
+    return (v === word);
+  }).length;
 }
 
 function addVerb(){
@@ -73,5 +77,5 @@ function addNoun(){
     noun.push(value);
     console.log('value is not the same', noun, value);
   }
-
 }
+//when a new input is submitted, a new button is created with the input
