@@ -29,23 +29,37 @@ function newQuote(){
   diyQuote = ''+noun[randomNumber(noun)]+' '+verb[randomNumber(verb)]+' '+adjective[randomNumber(adjective)]+'';
   document.getElementById("quoteDisplay").innerHTML = diyQuote;
 }
+function checkIfSame(word, arr) {
+  return arr.filter(function(v) {
+    return (v === word);
+  }).length;
+}
 function addAdjective(){
   const value = document.getElementById("adjective").value;
   console.log(value);
   if (value === ""){
     return
   }
-  adjective.push(value);
-  console.log(adjective);
+  if (checkIfSame(value, adjective)) {
+    console.log('value is the same', value);
+  } else {
+    adjective.push(value);
+    console.log('value is not the same', adjective, value);
+  }
 }
+
 function addVerb(){
   const value = document.getElementById("verb").value;
-  console.log(value);
+  console.log('value on enter', value);
   if (value === ""){
     return
   }
-  verb.push(value);
-  console.log(verb);
+  if (checkIfSame(value, verb)) {
+    console.log('value is the same', value);
+  } else {
+    verb.push(value);
+    console.log('value is not the same', verb, value);
+  }
 }
 function addNoun(){
   const value = document.getElementById("noun").value;
@@ -53,7 +67,11 @@ function addNoun(){
   if (value === ""){
     return
   }
-  noun.push(value);
-  console.log(noun);
+  if (checkIfSame(value, noun)) {
+    console.log('value is the same', value);
+  } else {
+    noun.push(value);
+    console.log('value is not the same', noun, value);
+  }
 
 }
