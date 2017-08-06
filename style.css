@@ -1,0 +1,87 @@
+html{
+  background-color: #3EECAC;
+  background-image: linear-gradient(19deg, #3EECAC 0%, #EE74E1 100%);
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin:0;
+  font-family: Helvetica;
+}
+*{
+  margin:auto;
+}
+input{
+  background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAHUlEQVQYV2P8////f0ZGRkYGKIAzMARgKlFUgAQBbtMMAZv4vhgAAAAASUVORK5CYII=)
+  repeat;
+  color:white;
+  padding:.5%;
+}
+::-webkit-input-placeholder{
+  color: white;
+  font-size: 15px;
+}
+#quoteDisplay{
+  color: white;
+  font-size: 25px;
+  padding:8%;
+  letter-spacing: 3px;
+  text-align: center;
+}
+.input{
+  padding-bottom: 4%;
+  text-align: center;
+
+}
+input:focus{
+  color:#00ff0c;
+  border:2px solid #00ff0c;
+  font-size: 15px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+h1{
+  font-size: 50px;
+  width:100%;
+  color:white;
+  padding-top: 2%;
+  text-align: center;
+  letter-spacing: 2px;
+
+}
+button{
+  border: solid 1px white;
+  color:white;
+  border-radius: 5px;
+  background-image: linear-gradient(19deg, #3EECAC 0%, #EE74E1 100%);
+  padding:0.8%;
+  text-align: center;
+
+}
+button:hover{
+  border: solid 1px #00ff0c;
+  color:#00ff0c;
+}
+#quoteDisplay:before{
+  content:open-quote;
+  font-size: 30px;
+}
+#quoteDisplay:after{
+  content: close-quote;
+  font-size: 30px;
+}
+p{
+  font-size: 10px;
+  color: white;
+}
+.myName{
+  bottom:0px;
+  position: absolute;
+  padding: 1%;
+  width:50%;
+  letter-spacing: 2px;
+}
